@@ -1,7 +1,7 @@
-### [ReactFiberBeginWork](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiberBeginWork.js)
+### [ReactFiberBeginWork](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberBeginWork.js)
 
 
-#### [updateClassComponent](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiberBeginWork.js#L428)
+#### [updateClassComponent](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberBeginWork.js#L428)
 1. go different branch: `mount`, `resume`, `update`
 2. call some hooks, such as: `componentWillReceiveProps`, `shouldComponentUpdate`, ...
 3. return `child` fiber of `workInProgress`
@@ -26,7 +26,7 @@ Out
   finishClassComponent(...)
 ```
 
-#### [finishClassComponent](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiberBeginWork.js#L501)
+#### [finishClassComponent](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberBeginWork.js#L501)
 1. `update refs` even if shouldComponentUpdate returns `false`
 2. call `render` and get new children when shouldComponentUpdate returns `true`
 3. `reconcile` returned next children
@@ -57,7 +57,7 @@ Out
   workInProgress.child
 ```
 
-#### [beginWork](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiberBeginWork.js#L1510)
+#### [beginWork](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberBeginWork.js#L1510)
 ```
 In
   current: Fiber | null

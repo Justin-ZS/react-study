@@ -1,4 +1,4 @@
-### [ReactFiber](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiber.js)  
+### [ReactFiber](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiber.js)  
 
 #### fiber
 ```
@@ -43,7 +43,7 @@
 ```
 <img src="./img/fiber.png" />
 
-#### [createFiber](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiber.js#L287)
+#### [createFiber](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiber.js#L287)
 `FiberNode` will create a `fiber` with default value, except for the arguments
 ```
 In
@@ -55,7 +55,7 @@ Out
   new FiberNode(tag, pendingProps, key, mode);
 ```
 
-#### [createFiberFromTypeAndProps](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiber.js#L414)
+#### [createFiberFromTypeAndProps](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiber.js#L414)
 ```
 In
   type: any, // React$ElementType
@@ -92,7 +92,7 @@ Out
   fiber
 ```
 
-#### [createWorkInProgress](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiber.js#L326)
+#### [createWorkInProgress](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiber.js#L326)
 > The alternate of the current fiber is the `work-in-progress`, and the alternate of the `work-in-progress` is the current fiber.
 
 this function is used to create an `alternate` fiber to do work on.

@@ -1,6 +1,6 @@
-### [ReactFiberCompleteWork](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiberCompleteWork.js)
+### [ReactFiberCompleteWork](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberCompleteWork.js)
 
-#### [completeWork](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiberCompleteWork.js#L539)
+#### [completeWork](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberCompleteWork.js#L539)
 ```
 In
   current: Fiber | null

@@ -1,4 +1,4 @@
-### [ReactFiberClassComponent](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiberClassComponent.js)
+### [ReactFiberClassComponent](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberClassComponent.js)
 
 ```
 {
@@ -16,9 +16,9 @@
 ```
 
 
-####  [classComponentUpdater](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiberClassComponent.js#L187)
+####  [classComponentUpdater](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberClassComponent.js#L187)
 
-#### [adoptClassInstance](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiberClassComponent.js#L502)
+#### [adoptClassInstance](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberClassComponent.js#L502)
 link `fiber` with `instance`.
 ```
 In 
@@ -29,7 +29,7 @@ Body
   workInProgress.stateNode = instance
 ```
 
-#### [constructClassInstance](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiberClassComponent.js#L512)
+#### [constructClassInstance](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberClassComponent.js#L512)
 Construct component instance by `ctor`.
 ```
 In
@@ -47,7 +47,7 @@ Out
   instance
 ```
 
-#### [applyDerivedStateFromProps](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiberClassComponent.js#L148)
+#### [applyDerivedStateFromProps](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberClassComponent.js#L148)
 shallow merge `state` with `derived state` of `props`  
 update `fiber's memoizedState`
 ```
@@ -65,7 +65,7 @@ Body
     updateQueue.baseState = memoizedState;
 ```
 
-#### [mountClassInstance](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiberClassComponent.js#L725)
+#### [mountClassInstance](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberClassComponent.js#L725)
 mount class `instance`  
 set `instance` properties and call related hooks
 ```
@@ -95,7 +95,7 @@ Body
     workInProgress.effectTag |= Update
 ```
 
-#### [updateClassInstance](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/ReactFiberClassComponent.js#L980)
+#### [updateClassInstance](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberClassComponent.js#L980)
 just like `mountClassInstance`
 ```
 In

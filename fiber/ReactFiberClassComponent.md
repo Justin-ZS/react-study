@@ -30,7 +30,7 @@ Body
 ```
 
 #### [constructClassInstance](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberClassComponent.js#L512)
-Construct component instance by `ctor`.
+1. Construct component instance by `ctor`.
 ```
 In
   workInProgress: Fiber
@@ -48,8 +48,8 @@ Out
 ```
 
 #### [applyDerivedStateFromProps](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberClassComponent.js#L148)
-shallow merge `state` with `derived state` of `props`  
-update `fiber's memoizedState`
+1. shallow merge `state` with `derived state` of `props`  
+2. update `fiber's memoizedState`
 ```
 In
   workInProgress: Fiber
@@ -66,8 +66,8 @@ Body
 ```
 
 #### [mountClassInstance](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberClassComponent.js#L725)
-mount class `instance`  
-set `instance` properties and call related hooks
+1. mount class `instance`  
+2. set `instance` properties and call related hooks
 ```
 In
   workInProgress: Fiber
@@ -96,7 +96,7 @@ Body
 ```
 
 #### [updateClassInstance](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberClassComponent.js#L980)
-just like `mountClassInstance`
+1. just like `mountClassInstance`
 ```
 In
   current: Fiber

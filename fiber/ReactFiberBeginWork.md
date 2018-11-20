@@ -2,8 +2,8 @@
 
 
 #### [updateClassComponent](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberBeginWork.js#L428)
-1. go different branch: `mount`, `resume`, `update`
-2. call some hooks, such as: `componentWillReceiveProps`, `shouldComponentUpdate`, ...
+1. switch to different branch: `mount`, `resume`, `update`
+2. call lifecycle hooks, such as: `componentWillReceiveProps`, `shouldComponentUpdate`, ...
 3. return `child` fiber of `workInProgress`
 ```
 In 
@@ -58,10 +58,32 @@ Out
 ```
 
 #### [beginWork](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactFiberBeginWork.js#L1510)
+1. Update current component(`workInProgress`)
+2. if current component(`workInProgress`) return next level `elements`, reconcile them.
+3. return `child` fiber of `workInProgress`
 ```
 In
   current: Fiber | null
   workInProgress: Fiber
   renderExpirationTime: ExpirationTime
 Body
+  oldProps = current.memoizedProps
+  newProps = workInProgress.pendingProps
+  if_not_have_any_pending_work
+    do_some_bookkeeping
+    > bailoutOnAlreadyFinishedWork(...)
+  // clear the expiration time
+  workInProgress.expirationTime = NoWork;
+  switch(workInProgress.tag)
+    IndeterminateComponent: > mountIndeterminateComponent(...)
+    LazyComponent:          > mountLazyComponent(...)
+    FunctionComponent:      > updateFunctionComponent(...)
+    ClassComponent:         > updateClassComponent(...)
+    HostRoot:               > updateHostRoot(...)
+    HostComponent:          > updateHostComponent(...)
+    HostText:               > updateHostText(...)
+    SuspenseComponent:      > updateSuspenseComponent(...)
+    HostPortal:             > updatePortalComponent(...)
+    ForwardRef:             > ForwardRef(...)
+    ...
 ```

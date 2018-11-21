@@ -1,7 +1,4 @@
-### [ReactChildFiber](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactChildFiber.js)
-
-
-#### placeSingleChild
+### placeSingleChild
 1. `tag with `placement` for single child case.
 ```
 In
@@ -14,7 +11,7 @@ Out
 
 ```
 
-#### [reconcileChildFibers](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactChildFiber.js#L1218)
+### [reconcileChildFibers](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactChildFiber.js#L1218)
 > Reconciliation is an `algorithm` React uses to diff one tree with another to determine `which parts need to be changed`.
 
 1. the `returnFiber` has been reconciled

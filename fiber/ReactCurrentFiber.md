@@ -1,6 +1,4 @@
-### [ReactCurrentFiber.js](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactCurrentFiber.js)
-
-#### [describeFiber](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactCurrentFiber.js#L29)
+### [describeFiber](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactCurrentFiber.js#L29)
 > `Fiber` is reimplementation of the `stack`, specialized for React components. You can think of a single fiber as a `virtual stack frame`.  
 
 this function will collect stack info from `fiber`
@@ -14,7 +12,7 @@ Out
 ```
 
 
-#### [getStackByFiberInDevAndProd](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactCurrentFiber.js#L51)
+### [getStackByFiberInDevAndProd](https://github.com/facebook/react/blob/v16.6.3/packages/react-reconciler/src/ReactCurrentFiber.js#L51)
 this function will traverse the whole fiber stack.(from bottom to top)
 ```
 In

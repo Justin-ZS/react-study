@@ -57,7 +57,7 @@ In
   getDerivedStateFromProps: (props: any, state: any) => any
 Body
   prevState = workInProgress.memoizedState
-  partialState = getDerivedStateFromProps(nextProps, prevState)
+  partialState = getDerivedStateFromProps(nextProps, prevState) // new life hook
   if_partialState_exist
     workInProgress.memoizedState = shallowMerge(prevState, partialState)
   updateQueue = workInProgress.updateQueue;
@@ -83,7 +83,7 @@ Body
     instance.state = workInProgress.memoizedState
 
   if_ctor.getDerivedStateFromProps_exist
-    call_applyDerivedStateFromProps
+    call_applyDerivedStateFromProps // new life hook
     instance.state = workInProgress.memoizedState
 
   if_instance.componentWillMount_exist
@@ -114,6 +114,10 @@ Body
   if_updateQueue_exist
     processUpdateQueue(...)
     newState = workInProgress.memoizedState;
+
+  if_ctor.getDerivedStateFromProps_exist
+    call_applyDerivedStateFromProps // new life hook
+    newState = workInProgress.memoizedState
 
   shouldUpdate = checkShouldComponentUpdate(...) // hook
   if_shouldUpdate

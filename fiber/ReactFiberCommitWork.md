@@ -40,9 +40,9 @@ Body
     ClassComponent:
       instance = finishedWork.stateNode
       if_current_exist
-        instance.componentDidUpdate(...) // lifeCycle
+        instance.componentDidUpdate(...) // hook
       else
-        instance.componentDidMount() // lifeCycle
+        instance.componentDidMount() // hook
 
       updateQueue = finishedWork.updateQueue
       if_updateQueue_exist

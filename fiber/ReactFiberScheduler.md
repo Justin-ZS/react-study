@@ -84,6 +84,9 @@ In
 Body
   firstEffect = finishedWork.firstEffect
   nextEffect = firstEffect
+  // Invoke instances of getSnapshotBeforeUpdate before mutation.
+  while (nextEffect !== null)
+    commitBeforeMutationLifecycles() // new life hook
   // commit effects
   while (nextEffect !== null)
     commitAllHostEffects()
